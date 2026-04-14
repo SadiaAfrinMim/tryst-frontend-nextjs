@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Tryst.link - Home of the independent escort',
+  description: 'Created with trust and safety at its core, Tryst.link is the fastest-growing escort platform in the world. We list thousands of independent adult entertainers, including escorts, BDSM, kink, video, massage, and much more.',
+  generator: 'Tryst.link',
   icons: {
     icon: [
       {
