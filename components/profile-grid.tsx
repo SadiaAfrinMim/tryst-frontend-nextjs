@@ -104,14 +104,14 @@ export function ProfileGrid() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {profiles.map((profile) => (
             <div
               key={profile.id}
-              className="group relative rounded-xl overflow-hidden bg-slate-800 cursor-pointer"
+              className="group relative rounded-xl overflow-hidden bg-slate-800 cursor-pointer active:scale-[0.98] transition-transform"
             >
               {/* Image */}
-              <div className="relative h-[340px]">
+              <div className="relative h-[280px] md:h-[340px]">
                 <Image
                   src={profile.image}
                   alt={profile.name}
@@ -149,12 +149,12 @@ export function ProfileGrid() {
               </div>
 
               {/* Full info overlay on image */}
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 translate-y-[calc(100%-48px)] group-hover:translate-y-0 transition-transform duration-300 z-10">
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 translate-y-[calc(100%-48px)] group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-300 z-10">
                 <h3 className="font-semibold text-gray-900 text-sm mb-2">
                   {profile.name}
                 </h3>
                 
-                <div className="opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">
+                <div className="opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 group-active:opacity-100 group-active:max-h-24 transition-all duration-300">
                   <p className="text-xs text-gray-500 italic">
                     Natural beauty
                   </p>
@@ -173,7 +173,7 @@ export function ProfileGrid() {
               </div>
 
               {/* Hover Heart */}
-              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition">
                 <Heart className="w-5 h-5 text-white fill-red-500" />
               </div>
 

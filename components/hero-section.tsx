@@ -84,19 +84,19 @@ export default function HeroSection() {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl w-full max-w-5xl p-8 relative">
+             <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-5xl p-4 md:p-8 relative max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button 
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-6 right-6 text-gray-500 hover:text-gray-700"
+              className="absolute top-4 right-4 md:top-6 md:right-6 text-gray-500 hover:text-gray-700 z-10"
             >
-              <X size={28} />
+              <X size={24} />
             </button>
 
-            <h2 className="text-4xl font-bold text-center mb-8">Find escorts</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-8">Find escorts</h2>
 
             {/* Search Row */}
-            <div className="flex items-center gap-3 mb-10">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 mb-6 md:mb-10">
               <div className="flex items-center flex-1 gap-3 border-2 border-gray-200 rounded-2xl px-4 py-3">
                 <MapPin className="text-gray-400" size={24} />
                 <input
@@ -113,14 +113,16 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {["Female", "Male", "Non-binary", "Trans Only"].map((item) => (
-                <button
-                  key={item}
-                  className="px-6 py-3 rounded-2xl bg-white border-2 border-gray-100 text-base"
-                >
-                  {item}
-                </button>
-              ))}
+              <div className="flex flex-wrap gap-2 w-full justify-center">
+                {["Female", "Male", "Non-binary", "Trans Only"].map((item) => (
+                  <button
+                    key={item}
+                    className="px-4 py-2 rounded-2xl bg-white border-2 border-gray-100 text-sm"
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
 
               <button className="bg-red-500 text-white px-8 py-3 rounded-2xl flex items-center gap-2 text-lg font-medium">
                 <Search size={24} />
@@ -129,64 +131,64 @@ export default function HeroSection() {
             </div>
 
             {/* Filters Grid */}
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {/* Column 1 */}
-              <div className="space-y-6 border-r pr-8">
+              <div className="space-y-4 md:space-y-6 md:border-r md:pr-8">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">KEYWORDS</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">KEYWORDS</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">SERVICE TYPE</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">SERVICE TYPE</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">CATERS TO</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">CATERS TO</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">HOURLY RATE</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">HOURLY RATE</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
               </div>
 
               {/* Column 2 */}
-              <div className="space-y-6 border-r pr-8">
+              <div className="space-y-4 md:space-y-6 md:border-r md:pr-8">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">AVAILABILITY</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">AVAILABILITY</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">AGE</span>
-                  <span className="text-gray-400">18+</span>
+                  <span className="text-gray-600 font-medium text-sm">AGE</span>
+                  <span className="text-gray-400 text-sm">18+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">ETHNICITY</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">ETHNICITY</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">BODY TYPE</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">BODY TYPE</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
               </div>
 
               {/* Column 3 */}
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">BREAST SIZE</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">BREAST SIZE</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">HEIGHT</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">HEIGHT</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">HAIR COLOUR</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">HAIR COLOUR</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 font-medium">EYE COLOUR</span>
-                  <span className="text-gray-400">ANY</span>
+                  <span className="text-gray-600 font-medium text-sm">EYE COLOUR</span>
+                  <span className="text-gray-400 text-sm">ANY</span>
                 </div>
               </div>
             </div>

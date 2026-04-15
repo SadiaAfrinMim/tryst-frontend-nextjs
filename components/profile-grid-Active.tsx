@@ -104,14 +104,14 @@ export function ProfileGridActive() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {profiles.map((profile) => (
             <div
               key={profile.id}
-              className="group relative rounded-xl overflow-hidden bg-slate-800 cursor-pointer"
+              className="group relative rounded-xl overflow-hidden bg-slate-800 cursor-pointer active:scale-[0.98] transition-transform"
             >
               {/* Image */}
-              <div className="relative h-[380px]">
+              <div className="relative h-[300px] md:h-[380px]">
                 <Image
                   src={profile.image}
                   alt={profile.name}
@@ -142,7 +142,7 @@ export function ProfileGridActive() {
               </div>
 
               {/* Bottom Info Card - Slides up over photo on hover */}
-              <div className="absolute bottom-0 left-0 w-full bg-white transition-transform duration-300 translate-y-full group-hover:translate-y-0 z-10">
+              <div className="absolute bottom-0 left-0 w-full bg-white transition-transform duration-300 translate-y-full group-hover:translate-y-0 group-active:translate-y-0 z-10">
                 <div className="p-3">
                   <h3 className="font-semibold text-sm text-gray-900">
                     {profile.name}
@@ -169,7 +169,7 @@ export function ProfileGridActive() {
               </div>
 
               {/* Hover Heart */}
-              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition z-20">
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition z-20">
                 <Heart className="w-5 h-5 text-white fill-red-500" />
               </div>
 
