@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
-import { Heart, AlertCircle } from 'lucide-react'
+import { AlertCircle } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
@@ -14,11 +13,7 @@ export default function ClientSignupPage() {
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Client signup attempt:', {
-      email,
-      password,
-      agreeToTerms
-    })
+    // TODO: Implement signup logic
   }
 
   return (

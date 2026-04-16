@@ -12,14 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    turbo: {
-      imageEndpoints: false,
-    },
-  },
-  turbopack: {
-    root: process.cwd(),
-  },
+
 }
 
 export default nextConfig
